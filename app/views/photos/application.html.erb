@@ -13,7 +13,15 @@
 
 <img src=<%=@photo%> width="800">
 
-<p>Cueva de los Verdes</p>
+
+
+<p><%=@caption%></p>
+
+<a href="/photos">Back</a>
+<a href="/photos/<%=@photoid%>/edit">Edit</a>
+<a href="/delete_photo/<%=@photoid%>">Delete</a>
+
+
 
 </body>
 </html>

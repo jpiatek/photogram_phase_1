@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photogram</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<h1>Edit photo</h1>
+
+<form action="/update_photo/<%=@photoid%>">
+  <div>
+    <label for="photo_caption">Caption:</label>
+    <input id="photo_caption" type="text" name="the_caption" value="<%=@caption%>">
+  </div>
+  <div>
+    <label for="photo_image_url">Image URL:</label>
+    <input id="photo_image_url" type="text" name="the_source" value="<%= @photo %>">
+  </div>
+  <div>
+    <button>Update Photo</button>
+  </div>
+</form>
+
+<!-- I suppose we don't need to get the Edit Photo and Add Photo to fully work until next time. -->
+
+
+</body>
+</html>
